@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/portofolio.css">
+    <link rel="stylesheet" href="css/service.css">
     <link rel="stylesheet" href="css/footer.css">
     <title></title>
 </head>
@@ -19,7 +19,7 @@
             <div class="logo">LOGO</div>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="service.html">Servicios</a></li>
+                <li><a href="">Servicios</a></li>
                 <li><a href="portofolio.html">Portafolio</a></li>
             </ul>
         <button class="btns open-contact">Contact</button>
@@ -30,7 +30,7 @@
         </div>
         </nav>
     </header>
-
+    
     <div class="contact-modal" id="contactModal">
         <div class="contact-form-box">
             <button class="close-contact" id="closeContact">&times;</button>
@@ -46,54 +46,64 @@
         </div>
     </div>
 
-    <main class="portfolio-about-page">
-        <section class="portfolio-about-hero">
-            <h1>Our Work</h1>
-            <p>A short introduction about who you are, what you create, and the type of work clients can expect from you.</p>
+    <main class="services-page">
+        <section class="services-hero">
+            <h1>Services</h1>
+            <p>Explore the services we offer and how each one can help bring your vision to life.</p>
         </section>
 
-        <section class="about-showcase">
-            <div class="about-text">
-                <h2>About Us</h2>
-                <p>
-                    Write a short paragraph about your brand, your style, your experience, and what makes your work different.
-                </p>
-                <p>
-                    Mention your process, your attention to detail, and the kind of results you want to create for clients.
-                </p>
+        <section class="services-gallery">
+            <div class="service-card">
+                <img src="assets\service1.jpg" alt="Service one">
+                <div>
+                    <h3>Service One</h3>
+                    <p>Short description of this service, what it includes, and who it is for.</p>
+                </div>
             </div>
 
-            <div class="about-image">
-                <img src="assets\about.jpg" alt="About us image">
+            <div class="service-card">
+                <img src="assets\service2.jpg" alt="Service two">
+                <div>
+                    <h3>Service Two</h3>
+                    <p>Short description of this service, what problem it solves, or what result it gives.</p>
+                </div>
             </div>
-        </section>
 
-        <section class="portfolio-section">
-            <h2>Portfolio</h2>
-
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="assets\project1.jpg" alt="Project one">
-                    <h3>Project One</h3>
-                    <p>Short description of this project.</p>
+            <div class="service-card">
+                <img src="assets\service3.jpg" alt="Service three">
+                <div>
+                    <h3>Service Three</h3>
+                    <p>Short description of this service in one or two clean sentences.</p>
                 </div>
+            </div>
 
-                <div class="portfolio-item">
-                    <img src="assets\project2.jpg" alt="Project two">
-                    <h3>Project Two</h3>
-                    <p>Short description of this project.</p>
+            <div class="service-card">
+                <img src="assets\service4.jpg" alt="Service four">
+                <div>
+                    <h3>Service Four</h3>
+                    <p>Short description of this service, package, or offer.</p>
                 </div>
+            </div>
 
-                <div class="portfolio-item">
-                    <img src="assets\project3.jpg" alt="Project three">
-                    <h3>Project Three</h3>
-                    <p>Short description of this project.</p>
+            <div class="service-card">
+                <img src="assets\service5.jpg" alt="Service five">
+                <div>
+                    <h3>Service Five</h3>
+                    <p>Short description of this service and what clients can expect.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="assets\service6.jpg" alt="Service six">
+                <div>
+                    <h3>Service Six</h3>
+                    <p>Short description of this service, process, or final result.</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
+        <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
                 <h2>LOGO</h2>
@@ -120,6 +130,7 @@
             <p>© 2026 LOGO. All rights reserved.</p>
         </div>
     </footer>
+
     <script>
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-links');
