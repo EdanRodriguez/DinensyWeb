@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <link rel="icon" href="Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/service.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -11,18 +12,16 @@
 </head>
 <body>
     <header>
-        <div class="top-nav">
-            <div>Email: bussiness@gmail.com</div>
-            <div>Phone: (xxx)-xxx-xxxx</div>
-        </div>
         <nav>
-            <div class="logo">LOGO</div>
+            <div class="logo">
+                <img class="logo" src="assets\Logo.png">
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="">Servicios</a></li>
+                <li><a href="service.html">Servicios</a></li>
                 <li><a href="portofolio.html">Portafolio</a></li>
             </ul>
-        <button class="btns" id="openContact">Contact</button>
+        <button class="btns open-contact">Contact</button>
         <div class="hamburger">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -30,6 +29,21 @@
         </div>
         </nav>
     </header>
+    
+    <div class="contact-modal" id="contactModal">
+        <div class="contact-form-box">
+            <button class="close-contact" id="closeContact">&times;</button>
+
+            <h2>Contact Us</h2>
+
+            <form>
+                <input type="text" placeholder="Your name" required>
+                <input type="email" placeholder="Your email" required>
+                <textarea placeholder="Your message" required></textarea>
+                <button type="submit" class="btns">Send</button>
+            </form>
+        </div>
+    </div>
 
     <main class="services-page">
         <section class="services-hero">
@@ -97,16 +111,16 @@
 
             <div class="footer-links">
                 <h3>Links</h3>
-                <a href="">Inicio</a>
-                <a href="">Servicios</a>
-                <a href="">Portafolio</a>
-                <a href="">Contact</a>
+                <a href="index.html">Inicio</a>
+                <a href="service.html">Servicios</a>
+                <a href="portofolio.html">Portafolio</a>
+                <a href="#" class="open-contact">Contact</a>
             </div>
 
             <div class="footer-contact">
                 <h3>Contact</h3>
-                <p>Email: business@gmail.com</p>
-                <p>Phone: (xxx)-xxx-xxxx</p>
+                <p>Email: dinenssycastillo@yahoo.com</p>
+                <p>Phone: (787)-448-0134</p>
                 <p>Location: Puerto Rico</p>
             </div>
         </div>
@@ -125,12 +139,15 @@
             });
         </script>
         <script>
-        const openContact = document.querySelector('#openContact');
+        const openContactButtons = document.querySelectorAll('.open-contact');
         const closeContact = document.querySelector('#closeContact');
         const contactModal = document.querySelector('#contactModal');
 
-        openContact.addEventListener('click', function () {
-            contactModal.classList.add('active');
+        openContactButtons.forEach(function (button) {
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
+                contactModal.classList.add('active');
+            });
         });
 
         closeContact.addEventListener('click', function () {
