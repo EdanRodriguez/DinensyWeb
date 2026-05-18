@@ -179,9 +179,15 @@ nav {
 }
 
 @media (max-width: 768px) {
+    header {
+        position: relative;
+        z-index: 9999;
+    }
+
     nav {
         position: relative;
         overflow: visible;
+        z-index: 9999;
     }
 
     a, button {
@@ -191,7 +197,6 @@ nav {
     .hamburger {
         display: block;
         cursor: pointer;
-        z-index: 1001;
         padding-right: 1rem;
     }
 
@@ -211,7 +216,7 @@ nav {
         opacity: 0;
 
         transition: max-height 0.35s ease, padding 0.35s ease, opacity 0.25s ease;
-        z-index: 1000;
+        z-index: 10000;
     }
 
     .nav-links.active {
@@ -222,6 +227,16 @@ nav {
 
     .nav-links li a {
         font-size: 1.5rem;
+    }
+
+    .hero {
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero img {
+        position: relative;
+        z-index: 1;
     }
 
     .btns {
