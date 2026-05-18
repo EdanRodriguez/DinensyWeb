@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/portofolio.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title></title>
+</head>
+<body>
+    <header>
+        <div class="top-nav">
+            <div>Email: bussiness@gmail.com</div>
+            <div>Phone: (xxx)-xxx-xxxx</div>
+        </div>
+        <nav>
+            <div class="logo">LOGO</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="service.html">Servicios</a></li>
+                <li><a href="portofolio.html">Portafolio</a></li>
+            </ul>
+        <button class="btns" id="openContact">Contact</button>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        </nav>
+    </header>
+
+    <div class="contact-modal" id="contactModal">
+        <div class="contact-form-box">
+            <button class="close-contact" id="closeContact">&times;</button>
+
+            <h2>Contact Us</h2>
+
+            <form>
+                <input type="text" placeholder="Your name" required>
+                <input type="email" placeholder="Your email" required>
+                <textarea placeholder="Your message" required></textarea>
+                <button type="submit" class="btns">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <main class="portfolio-about-page">
+        <section class="portfolio-about-hero">
+            <h1>Our Work</h1>
+            <p>A short introduction about who you are, what you create, and the type of work clients can expect from you.</p>
+        </section>
+
+        <section class="about-showcase">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>
+                    Write a short paragraph about your brand, your style, your experience, and what makes your work different.
+                </p>
+                <p>
+                    Mention your process, your attention to detail, and the kind of results you want to create for clients.
+                </p>
+            </div>
+
+            <div class="about-image">
+                <img src="assets\about.jpg" alt="About us image">
+            </div>
+        </section>
+
+        <section class="portfolio-section">
+            <h2>Portfolio</h2>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="assets\project1.jpg" alt="Project one">
+                    <h3>Project One</h3>
+                    <p>Short description of this project.</p>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="assets\project2.jpg" alt="Project two">
+                    <h3>Project Two</h3>
+                    <p>Short description of this project.</p>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="assets\project3.jpg" alt="Project three">
+                    <h3>Project Three</h3>
+                    <p>Short description of this project.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2>LOGO</h2>
+                <p>Short sentence about your brand, service, or purpose.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Links</h3>
+                <a href="index.html">Inicio</a>
+                <a href="service.html">Servicios</a>
+                <a href="portofolio.html">Portafolio</a>
+                <a href="">Contact</a>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>Email: business@gmail.com</p>
+                <p>Phone: (xxx)-xxx-xxxx</p>
+                <p>Location: Puerto Rico</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 LOGO. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', function () {
+                navMenu.classList.toggle('active');
+            });
+        </script>
+        <script>
+        const openContact = document.querySelector('#openContact');
+        const closeContact = document.querySelector('#closeContact');
+        const contactModal = document.querySelector('#contactModal');
+
+        openContact.addEventListener('click', function () {
+            contactModal.classList.add('active');
+        });
+
+        closeContact.addEventListener('click', function () {
+            contactModal.classList.remove('active');
+        });
+
+        contactModal.addEventListener('click', function (e) {
+            if (e.target === contactModal) {
+                contactModal.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

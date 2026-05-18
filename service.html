@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/service.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title></title>
+</head>
+<body>
+    <header>
+        <div class="top-nav">
+            <div>Email: bussiness@gmail.com</div>
+            <div>Phone: (xxx)-xxx-xxxx</div>
+        </div>
+        <nav>
+            <div class="logo">LOGO</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="">Servicios</a></li>
+                <li><a href="portofolio.html">Portafolio</a></li>
+            </ul>
+        <button class="btns" id="openContact">Contact</button>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        </nav>
+    </header>
+
+    <main class="services-page">
+        <section class="services-hero">
+            <h1>Services</h1>
+            <p>Explore the services we offer and how each one can help bring your vision to life.</p>
+        </section>
+
+        <section class="services-gallery">
+            <div class="service-card">
+                <img src="assets\service1.jpg" alt="Service one">
+                <div>
+                    <h3>Service One</h3>
+                    <p>Short description of this service, what it includes, and who it is for.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="assets\service2.jpg" alt="Service two">
+                <div>
+                    <h3>Service Two</h3>
+                    <p>Short description of this service, what problem it solves, or what result it gives.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="assets\service3.jpg" alt="Service three">
+                <div>
+                    <h3>Service Three</h3>
+                    <p>Short description of this service in one or two clean sentences.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="assets\service4.jpg" alt="Service four">
+                <div>
+                    <h3>Service Four</h3>
+                    <p>Short description of this service, package, or offer.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="assets\service5.jpg" alt="Service five">
+                <div>
+                    <h3>Service Five</h3>
+                    <p>Short description of this service and what clients can expect.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="assets\service6.jpg" alt="Service six">
+                <div>
+                    <h3>Service Six</h3>
+                    <p>Short description of this service, process, or final result.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2>LOGO</h2>
+                <p>Short sentence about your brand, service, or purpose.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Links</h3>
+                <a href="">Inicio</a>
+                <a href="">Servicios</a>
+                <a href="">Portafolio</a>
+                <a href="">Contact</a>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>Email: business@gmail.com</p>
+                <p>Phone: (xxx)-xxx-xxxx</p>
+                <p>Location: Puerto Rico</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 LOGO. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', function () {
+                navMenu.classList.toggle('active');
+            });
+        </script>
+        <script>
+        const openContact = document.querySelector('#openContact');
+        const closeContact = document.querySelector('#closeContact');
+        const contactModal = document.querySelector('#contactModal');
+
+        openContact.addEventListener('click', function () {
+            contactModal.classList.add('active');
+        });
+
+        closeContact.addEventListener('click', function () {
+            contactModal.classList.remove('active');
+        });
+
+        contactModal.addEventListener('click', function (e) {
+            if (e.target === contactModal) {
+                contactModal.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
