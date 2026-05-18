@@ -12,8 +12,8 @@
 <body>
     <header>
         <div class="top-nav">
-            <div>Email: bussiness@gmail.com</div>
-            <div>Phone: (xxx)-xxx-xxxx</div>
+            <div>Email: dinenssycastillo@yahoo.com</div>
+            <div>Phone: (787)-448-0134</div>
         </div>
         <nav>
             <div class="logo">LOGO</div>
@@ -22,7 +22,7 @@
                 <li><a href="service.html">Servicios</a></li>
                 <li><a href="portofolio.html">Portafolio</a></li>
             </ul>
-        <button class="btns" id="openContact">Contact</button>
+        <button class="btns open-contact">Contact</button>
         <div class="hamburger">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -105,13 +105,13 @@
                 <a href="index.html">Inicio</a>
                 <a href="service.html">Servicios</a>
                 <a href="portofolio.html">Portafolio</a>
-                <a href="">Contact</a>
+                <a href="#" class="open-contact">Contact</a>
             </div>
 
             <div class="footer-contact">
                 <h3>Contact</h3>
-                <p>Email: business@gmail.com</p>
-                <p>Phone: (xxx)-xxx-xxxx</p>
+                <p>Email: dinenssycastillo@yahoo.com</p>
+                <p>Phone: (787)-448-0134</p>
                 <p>Location: Puerto Rico</p>
             </div>
         </div>
@@ -129,12 +129,15 @@
             });
         </script>
         <script>
-        const openContact = document.querySelector('#openContact');
+        const openContactButtons = document.querySelectorAll('.open-contact');
         const closeContact = document.querySelector('#closeContact');
         const contactModal = document.querySelector('#contactModal');
 
-        openContact.addEventListener('click', function () {
-            contactModal.classList.add('active');
+        openContactButtons.forEach(function (button) {
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
+                contactModal.classList.add('active');
+            });
         });
 
         closeContact.addEventListener('click', function () {
